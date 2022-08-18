@@ -24,7 +24,8 @@ urlpatterns = [
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
     path("api-auth/", include("rest_framework.urls")),
-        re_path(r"^.*$", IndexTemplateView.as_view(),name='entry-point') #entry point
+    path('api/v1/', include('blog.urls')),
+    re_path(r"^.*$", IndexTemplateView.as_view(),name='entry-point') #entry point
 
 
 ]

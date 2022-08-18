@@ -149,3 +149,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
+DJOSER = {
+    'SERIALIZERS': {
+         'current_user': 'user.serializers.UserSerializer',
+         'user_create': 'user.serializers.UserCreateSerializer',
+
+    }
+}
